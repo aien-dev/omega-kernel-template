@@ -3,7 +3,8 @@
 Write a small kernel in [Omega](https://github.com/aien-dev/omega-mv), push, and get a receipt:
 the same `kernel.om` compiled by the pinned Omega compiler, run **natively on AArch64** and as
 **SPIR-V on PoCL's CPU OpenCL device**, and checked case by case against a Python reference.
-It runs on GitHub's free `ubuntu-24.04-arm` runners. No GPU, no CUDA toolkit, no local install.
+It runs on GitHub's `ubuntu-24.04-arm` runners (free for public repositories), in about half a
+minute. No GPU, no CUDA toolkit, no local install.
 
 ## Quickstart
 
@@ -31,7 +32,10 @@ AArch64 result bit for bit (a trap must be the same trap on both). The check run
 lines plus edge values and 32 seeded random inputs per `fn`, so the same commit always checks the
 same cases. A wrong kernel fails: the branch
 [`demo/wrong-kernel`](https://github.com/aien-dev/omega-kernel-template/tree/demo/wrong-kernel)
-uses the textbook `(a + b) / 2`, which overflows `uint`, and its run is red.
+uses the textbook `(a + b) / 2`, which overflows `uint`, and
+[its run](https://github.com/aien-dev/omega-kernel-template/actions/runs/40426783628) is red
+(20 of 138 cases differ) while
+[`main`](https://github.com/aien-dev/omega-kernel-template/actions/runs/40426781699) passes all 138.
 
 ## Honest scope
 

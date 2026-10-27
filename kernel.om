@@ -2,9 +2,9 @@ note kernel.om: every fn here becomes an OpenCL kernel in kernel.spv and is also
 note compiled to a native AArch64 program. reference.py must give the expected value.
 note Scalar types: uchar ushort uint ulong byte short int long bool; at most 6 parameters.
 
-note Average of two uint values, rounded down, without overflow: a + b can need 33 bits.
+note NEGATIVE CONTROL: textbook (a + b) / 2 wraps when a + b needs 33 bits, so this run must FAIL.
 fn avg a uint b uint to uint
-ret add and a b shr xor a b uint 1
+ret shr add a b uint 1
 end
 
 note Greatest common divisor (Euclid). Loops carry a bound; 64 rounds cover any 32-bit pair.

@@ -1,6 +1,20 @@
 {
-  "schema_version": "1.0.0",
-  "name": "omega-kernel-template",
+  "extensions": {
+    "generated": {
+      "children": [],
+      "children_root": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compiled_at": "2026-10-27T00:37:35Z",
+      "compiler": "crumb-compile/1",
+      "digest": "sha256:b552194b60af839fd8b99b390f640c764e5e018f13e9b8554109e292b77e426c",
+      "evidence_files": 0,
+      "evidence_root": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "files": 14,
+      "generated_at_commit": "142b32cb3189d8680b650d4ed35248786ed1b4f7",
+      "source_tree": "sha256:eb2d13fb7a37e5f0a1251fd663f75a11957ff36860a01823d83dd1b5d7865f01"
+    }
+  },
   "layer": "tooling",
-  "purpose": "GitHub template: edit kernel.om, push, and Actions on ubuntu-24.04-arm compile it with pinned omc, run it natively on AArch64 and as SPIR-V on PoCL CPU, compare with reference.py, and publish a sha256 receipt. CPU evidence only."
+  "name": "omega-kernel-template",
+  "purpose": "GitHub template: edit kernel.om, push, and Actions on ubuntu-24.04-arm compile it with pinned omc, run it natively on AArch64 and as SPIR-V on PoCL CPU, compare with reference.py, and publish a sha256 receipt. CPU evidence only.",
+  "schema_version": "1.0.0"
 }

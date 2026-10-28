@@ -93,6 +93,10 @@ The kernel compiler and the SPIR-V translator are Omega. The glue around them is
   `reference.py` stays Python on purpose: an oracle independent of `omc`.
 - `opencl-host.c` and `parity.py` come from omega-mv `seed/spirv/`, where their status is tracked.
 
+## Connected repos
+
+- [aien-dev/openaccel-lab](https://github.com/aien-dev/openaccel-lab): [draft proposal #1](https://github.com/aien-dev/openaccel-lab/pull/1) proposes running kernels across OpenCL, Triton, HIP, CUDA and Omega with controls and a board. That proposal selects this template's PoCL release asset (`pocl-7.2-888c9774-noble-arm64.1`) as its arm64 OpenCL runtime and pins this repository at `23a04c9f`. This describes proposed integration, not functionality on OpenAccel Lab's default branch.
+
 ## License
 
 Apache-2.0; see `LICENSE` and `NOTICE`.
